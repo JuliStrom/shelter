@@ -2,7 +2,7 @@ import { asset } from '../data/pets.js';
 
 export default function About() {
  return (<section className="about" id="About_the_shelter">
-        <img src={asset('shelter/assets/images/about-pets.jpg')}  alt="Собака и кошка из приюта" className="section-about_image" />
+        <img src={asset('assets/images/about-pets.jpg')}  alt="Собака и кошка из приюта" className="section-about_image" />
         <div className="about-shelter_text">
             <h2>О приюте<br />«Приют в Софрино»</h2>
             <p className="paragraf_text">Сейчас под нашей опекой 121 собака и 342 кошки. По статистике, только 20% из них находят семью. Остальные продолжают жить в приюте и ждать встречи с человеком, который подарит им заботу и любовь.</p>

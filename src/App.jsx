@@ -1,4 +1,4 @@
-﻿import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {pets} from './data/pets.js';
 import Hero from './components/Hero.jsx';
@@ -10,8 +10,8 @@ import Footer from './components/Footer.jsx';
 // Resolve navigation against the entry point so nested HTML URLs work on static hosting.
 const isCatalog = /\/our_pets\.html$/.test(location.pathname);
 const isDetail = /\/pet_jennifer\.html$/.test(location.pathname);
-const homeHref = isCatalog ? '../../index.html' : isDetail ? '../../../index.html' : './index.html';
-const catalogHref = isCatalog ? './our_pets.html' : isDetail ? '../our_pets.html' : './shelter/pages/our_pets.html';
+const homeHref = isCatalog ? '../index.html' : isDetail ? '../../index.html' : './index.html';
+const catalogHref = isCatalog ? './our_pets.html' : isDetail ? '../our_pets.html' : './pages/our_pets.html';
 
 function useViewport() {
     const [width, setWidth] = useState(window.innerWidth);

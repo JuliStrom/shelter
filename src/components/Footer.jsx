@@ -40,6 +40,6 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <img className="footer_image-dog" src={asset('shelter/assets/images/footer-puppy.png')}  alt="Щенок" />
+        <img className="footer_image-dog" src={asset('assets/images/footer-puppy.png')}  alt="Щенок" />
     </footer>);
 }

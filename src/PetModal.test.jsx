@@ -1,4 +1,4 @@
-﻿import { StrictMode } from 'react';
+import { StrictMode } from 'react';
 import { it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

@@ -6,6 +6,6 @@ export default function Hero() { return (<div className="start-screen_content">
                     <a href="#Our_pets" className="button1">Найти друга</a>                 
                 </div>
                     
-                <img className="start-screen_image" src={asset('shelter/assets/images/start-screen-puppy.png')}  alt="Щенок, который ищет дом" />
+                <img className="start-screen_image" src={asset('assets/images/start-screen-puppy.png')}  alt="Щенок, который ищет дом" />
             </div>   
     ); }

@@ -608,7 +608,7 @@ h4 {
 }
 footer {
     display: flex;
-    background-image: url(shelter/assets/images/footer-background.png);
+    background-image: url(assets/images/footer-background.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px 40px 0;
