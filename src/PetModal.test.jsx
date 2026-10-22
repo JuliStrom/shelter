@@ -68,5 +68,5 @@ it('shows each pet once across all catalog pages, including the last partial pag
   }
  }
  expect(seen).toEqual(pets.map(pet => pet.name));
- expect(new Set(seen).size).toBe(18);
+ expect(new Set(seen).size).toBe(pets.length);
 });

@@ -32,7 +32,7 @@ function Header({open, setOpen}) {
     ];
     return <header className="header">
         <a className="logo" href={homeHref}>
-            <div className="logo_title">Приют в Софрино</div>
+            <div className="logo_title">Кожуховский приют</div>
             <div className="logo_subtitile">Помогаем найти любящий дом</div>
         </a>
         {open && <button className="menu-backdrop" aria-label="Закрыть меню" onClick={() => setOpen(false)}/>}
@@ -91,7 +91,11 @@ export function PetModal({pet, onClose}) {
                     <h3>{pet.type} — {pet.breed}</h3>
           {pet.isDemo && <p className="pet-demo-note">Демонстрационная анкета. Сведения о питомце требуют подтверждения.</p>}
                     <p id="pet-description">{pet.description}</p>
-                    <ul className="pet-facts">{[['Возраст', pet.age], ['Прививки', pet.inoculations.join(', ')], ['Заболевания', pet.diseases.join(', ')], ['Паразиты', pet.parasites.join(', ')]].map(([label, value]) =>
+                    {pet.status && <p>{pet.status}</p>}
+                    {pet.phone && <p>Куратор: <a href={`tel:${pet.phone}`}>{pet.contactName}: {pet.phone}</a></p>}
+                    {pet.sourceUrl && <p><a href={pet.sourceUrl} target="_blank" rel="noopener noreferrer">Карточка и другие фотографии на vao-priut.org</a></p>}
+                    {pet.sourceUrl && <p className="pet-demo-note">Данные перенесены 22.10.2026. Наличие питомца и состояние здоровья уточняйте у куратора.</p>}
+                    <ul className="pet-facts">{[['Дата рождения', pet.age], ['Прививки', pet.inoculations.join(', ')], ['Заболевания', pet.diseases.join(', ')], ['Паразиты', pet.parasites.join(', ')]].map(([label, value]) =>
                         <li key={label}><strong>{label}:</strong> {value}</li>)}</ul>
                 </div>
             </div>
@@ -166,9 +170,12 @@ export default function App() {
         <main>{isDetail ?
             <section className="pet-detail"><h1>{pets[0].name}</h1><img src={pets[0].img} alt={pets[0].name}/>
                 <h2>{pets[0].type} - {pets[0].breed}</h2><p>{pets[0].description}</p>
+                <p>{pets[0].status}</p>
+                <p>Куратор: <a href={`tel:${pets[0].phone}`}>{pets[0].contactName}: {pets[0].phone}</a></p>
+                <a href={pets[0].sourceUrl} target="_blank" rel="noopener noreferrer">Исходная карточка питомца</a>
                 <ul className="pet-facts">{['age', 'inoculations', 'diseases', 'parasites'].map(key => <li key={key}>
                     <strong>{{
-                        age: 'Возраст',
+                        age: 'Дата рождения',
                         inoculations: 'Прививки',
                         diseases: 'Заболевания',
                         parasites: 'Паразиты'

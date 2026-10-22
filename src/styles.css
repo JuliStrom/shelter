@@ -132,3 +132,32 @@ footer a { overflow-wrap: anywhere; }
  .logo_subtitile { font-size: 11px; }
 }
 .pet-dialog .pet-demo-note { font-size: 12px; line-height: 1.5; color: #68605a; }
+
+footer .shelter-location-note { color: #cdcdcd; font-size: 14px; line-height: 1.5; margin: 0; }
+footer .shelter-location-note a { color: #f1cdb3; }
+
+.donation .content { min-width: 0; }
+.donation .donation-methods-title {
+ color: #545454;
+ font-size: 20px;
+ line-height: 1.4;
+ text-align: left;
+}
+.donation-methods {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ margin: 0;
+ padding-left: 22px;
+ color: #545454;
+ font-family: Georgia, serif;
+ font-size: 18px;
+ line-height: 1.5;
+}
+.donation-methods li::marker { color: #9b6843; }
+.donation-other-help {
+ color: #545454;
+ font-family: Arial, sans-serif;
+ font-size: 15px;
+ line-height: 1.6;
+}
